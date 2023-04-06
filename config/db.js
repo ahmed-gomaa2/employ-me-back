@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const mongoURI = require('../keys/index').mongURI;
 
 
 const connectDB = async () => {
     try {
-        const mongoo = await mongoose.connect(mongoURI);
+        const mongoo = await mongoose.connect(process.env.mongoURI);
         console.log('Mongoose connected!');
     }catch (err) {
         console.error(err.message);
