@@ -5,7 +5,6 @@ const User = require('../../models/User.js');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const keys = require('../../keys');
 const jwtSecret = process.env.jwt_secret;
 
 //@route     get api/users

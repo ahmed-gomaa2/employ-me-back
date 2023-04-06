@@ -5,7 +5,6 @@ const Profile = require('../../models/Profile.js');
 const User = require('../../models/User.js');
 const {check, validationResult} = require('express-validator');
 const request = require('request');
-const keys = require('../../keys');
 const Post = require('../../models/Post');
 const GithubClientID = process.env.GITHUB_CLIENT_ID;
 const GithubClientSecret = process.env.GITHUB_CLIENT_SEC
