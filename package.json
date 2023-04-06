@@ -27,7 +27,6 @@
     "express-validator": "^6.15.0",
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^9.0.0",
-    "mongodb": "^5.2.0",
     "mongoose": "^7.0.3",
     "prop-types": "^15.8.1",
     "request": "^2.88.2"
