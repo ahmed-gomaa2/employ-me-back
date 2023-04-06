@@ -3,13 +3,18 @@ const connectDB = require('./config/db.js');
 const bodyParser = require('body-parser');
 require('express-validator');
 const mongoose = require("mongoose");
+const cors = require('cors');
 
 const app = express();
 
 //Connect Database
 connectDB();
 //Init Middleware
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'UPDATE', 'PUT']
+}));
 // try {
 //     mongoose.connect('mongodb+srv://ahmed:ahmed@cluster0.heix1.mongodb.net/?retryWrites=true&w=majority')
 //     console.log('Mongoose connected');
