@@ -25,12 +25,6 @@ app.get('/', (req,res) => {
     res.send("API started")
 });
 
-(() => {
-    return setInterval(() => {
-        console.log('the server restarted!');
-    }, 10000);
-})();
-
 // Define Routes
 app.use('/api/users', require('./routes/api/users.js'));
 app.use('/api/auth', require('./routes/api/auth.js'));
