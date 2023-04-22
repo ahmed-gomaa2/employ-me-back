@@ -2,12 +2,13 @@
   "name": "employme",
   "version": "1.0.0",
   "description": "social network for developers",
-  "main": "index.js",
+  "main": "src/api.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
+    "start": "netlify-lambda serve src",
+    "server": "nodemon src/api.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "netlify-lambda build src"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,11 @@
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
+    "netlify-cli": "^14.2.1",
+    "netlify-lambda": "^2.0.16",
     "prop-types": "^15.8.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
